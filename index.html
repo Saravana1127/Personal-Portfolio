@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<!--
+  index.html
+  Purpose: Main entry point for Saravana Vel Narayanan's personal portfolio website.
+  Structure: Single-page layout with sections for Hero, About, Skills, Projects,
+             Experience, Certificates, and Contact.
+  Note: Replace placeholder GitHub URLs and headshot image where marked with TODO.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Saravana Vel Narayanan — AI &amp; Data Science Student Portfolio</title>
+  <meta name="description" content="Enthusiastic and detail-oriented AI & Data Science student with a strong foundation in machine learning, data analysis, and Python programming. Explore my projects, skills, and experience.">
+  <meta name="author" content="Saravana Vel Narayanan">
+  <meta name="keywords" content="AI, Data Science, Machine Learning, Python, Portfolio, Saravana Vel Narayanan">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Saravana Vel Narayanan — AI & Data Science Portfolio">
+  <meta property="og:description" content="Enthusiastic and detail-oriented AI & Data Science student with a strong foundation in machine learning, data analysis, and Python programming.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saravanaveln.github.io/portfolio">
+  <meta property="og:image" content="assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="#home" class="header__logo" aria-label="Saravana Vel — Home">
+        S<span>V</span>N
+      </a>
+
+      <nav role="navigation" aria-label="Main navigation">
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-list">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+
+        <ul class="nav__list" id="nav-list">
+          <li><a href="#home" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#certificates" class="nav__link">Certificates</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Mobile overlay -->
+    <div class="nav__overlay" id="nav-overlay"></div>
+  </header>
+
+  <main role="main">
+
+    <!-- ===== Hero Section ===== -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">
+            Saravana Vel
+            <span>Narayanan</span>
+          </h1>
+          <p class="hero__title">AI &amp; Data Science Student</p>
+          <p class="hero__summary">
+            Enthusiastic and detail-oriented AI &amp; Data Science student with a strong foundation in machine learning, data analysis, and Python programming.
+          </p>
+          <div class="hero__actions">
+            <a href="assets/SaravanavelCV.pdf" class="btn btn--primary" download>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+            <a href="#projects" class="btn btn--secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              View Projects
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__image-wrapper">
+          <!-- TODO: Replace this placeholder with your headshot image -->
+          <!-- <img src="assets/headshot.jpg" alt="Saravana Vel Narayanan" class="hero__image"> -->
+          <div class="hero__image-placeholder" aria-label="Profile photo placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Your Photo Here</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section class="section" id="about" aria-label="About me">
+      <div class="container">
+        <h2 class="section__title reveal">About Me</h2>
+        <p class="section__subtitle reveal">Get to know me and my background</p>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              I am an enthusiastic and detail-oriented AI &amp; Data Science student pursuing my B.Tech in Artificial Intelligence and Data Science at Kathir College of Engineering, Coimbatore. With a strong foundation in machine learning, data analysis, and Python programming, I am passionate about leveraging technology to solve real-world problems.
+            </p>
+            <p>
+              I have hands-on experience through internships in data science and AI/ML, where I worked on data preprocessing, exploratory data analysis, feature engineering, and building machine learning models. I'm constantly learning and exploring new technologies to expand my skill set and contribute to impactful projects.
+            </p>
+
+            <div class="about__info-grid">
+              <div class="about__info-item">
+                <p class="about__info-label">Location</p>
+                <p class="about__info-value">Coimbatore, Tamil Nadu</p>
+              </div>
+              <div class="about__info-item">
+                <p class="about__info-label">Email</p>
+                <p class="about__info-value">saravanaveln790@gmail.com</p>
+              </div>
+              <div class="about__info-item">
+                <p class="about__info-label">Degree</p>
+                <p class="about__info-value">B.Tech AI &amp; DS</p>
+              </div>
+              <div class="about__info-item">
+                <p class="about__info-label">CGPA</p>
+                <p class="about__info-value">8.5</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__education reveal">
+            <h3 class="about__education-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
+              Education
+            </h3>
+            <p class="about__education-degree">B.Tech — Artificial Intelligence &amp; Data Science</p>
+            <p class="about__education-school">Kathir College of Engineering, Coimbatore</p>
+            <div class="about__education-meta">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2023 – Present
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                CGPA: 8.5
+              </span>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <a href="assets/SaravanavelCV.pdf" class="btn btn--primary btn--small" download>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Full Resume (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section class="section skills" id="skills" aria-label="Skills">
+      <div class="container">
+        <h2 class="section__title reveal">Skills</h2>
+        <p class="section__subtitle reveal">Technologies and tools I work with</p>
+
+        <div class="skills__groups">
+          <!-- Frontend Skills -->
+          <div class="skills__group reveal">
+            <h3 class="skills__group-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Frontend &amp; Programming
+            </h3>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">Python</span>
+                <span class="skill__percent">90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="90%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">HTML</span>
+                <span class="skill__percent">85%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="85%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">CSS</span>
+                <span class="skill__percent">80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="80%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">JavaScript</span>
+                <span class="skill__percent">75%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend / Database Skills -->
+          <div class="skills__group reveal">
+            <h3 class="skills__group-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              Backend &amp; Databases
+            </h3>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">SQL</span>
+                <span class="skill__percent">85%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="85%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">PostgreSQL</span>
+                <span class="skill__percent">75%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="75%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">ClickHouse</span>
+                <span class="skill__percent">65%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="65%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">Machine Learning</span>
+                <span class="skill__percent">80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__fill" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects Section ===== -->
+    <section class="section" id="projects" aria-label="Projects">
+      <div class="container">
+        <h2 class="section__title reveal">Projects</h2>
+        <p class="section__subtitle reveal">Things I've built and experimented with</p>
+
+        <!-- Filter Buttons -->
+        <div class="projects__filter reveal">
+          <button class="projects__filter-btn projects__filter-btn--active" data-filter="all">All</button>
+          <button class="projects__filter-btn" data-filter="python">Python</button>
+          <button class="projects__filter-btn" data-filter="deep-learning">Deep Learning</button>
+          <button class="projects__filter-btn" data-filter="computer-vision">Computer Vision</button>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- Project 1: Crop Disease Prediction -->
+          <article class="project-card reveal" data-tags="python deep-learning computer-vision">
+            <div class="project-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4.97 0-9-2.24-9-5v-4"/><path d="M12 22c4.97 0 9-2.24 9-5v-4"/><path d="M12 13c4.97 0 9-2.24 9-5s-4.03-5-9-5-9 2.24-9 5 4.03 5 9 5z"/><line x1="12" y1="13" x2="12" y2="22"/><path d="M7 10.3V17"/><path d="M17 10.3V17"/></svg>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Crop Disease Prediction System</h3>
+              <p class="project-card__description">
+                Developed a CNN-based detection system in Python with automated preprocessing and real-time prediction capabilities for identifying crop diseases from leaf images.
+              </p>
+              <div class="project-card__tech">
+                <span class="project-card__tag">Python</span>
+                <span class="project-card__tag">TensorFlow</span>
+                <span class="project-card__tag">OpenCV</span>
+                <span class="project-card__tag">CNN</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/Saravana1127" class="project-card__link" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Emotion Detection -->
+          <article class="project-card reveal" data-tags="python deep-learning computer-vision">
+            <div class="project-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Real-Time Emotion Detection</h3>
+              <p class="project-card__description">
+                Built a CNN model that classifies live facial expressions, achieving instant classification of multiple emotions using deep learning and computer vision techniques.
+              </p>
+              <div class="project-card__tech">
+                <span class="project-card__tag">Python</span>
+                <span class="project-card__tag">OpenCV</span>
+                <span class="project-card__tag">TensorFlow</span>
+                <span class="project-card__tag">Deep Learning</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/Saravana1127" class="project-card__link" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Template Card (for future projects) -->
+          <article class="project-card project-card--template reveal" data-tags="all">
+            <div class="project-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Your Next Project</h3>
+              <p class="project-card__description">
+                <!-- TODO: Add your project description here -->
+                A brief description of your upcoming project. Replace this placeholder with your project details, including what it does and the problem it solves.
+              </p>
+              <div class="project-card__tech">
+                <!-- TODO: Add relevant technology tags -->
+                <span class="project-card__tag">Tech 1</span>
+                <span class="project-card__tag">Tech 2</span>
+                <span class="project-card__tag">Tech 3</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/Saravana1127" class="project-card__link" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <!-- Optional: Add live demo link -->
+                <!--
+                <a href="#" class="project-card__link" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
+                -->
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience Section ===== -->
+    <section class="section experience" id="experience" aria-label="Work experience">
+      <div class="container">
+        <h2 class="section__title reveal">Experience</h2>
+        <p class="section__subtitle reveal">My professional journey so far</p>
+
+        <div class="experience__timeline">
+
+          <!-- Internship 1: Unified Mentor -->
+          <div class="experience__item reveal">
+            <div class="experience__dot"></div>
+            <div class="experience__card">
+              <h3 class="experience__role">Data Science Intern</h3>
+              <p class="experience__company">Unified Mentor Private Ltd</p>
+              <div class="experience__meta">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Nov 2025 – Feb 2026
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Remote
+                </span>
+              </div>
+              <ul class="experience__responsibilities">
+                <li>Performed data preprocessing and cleaning on large datasets to ensure data quality and consistency</li>
+                <li>Conducted exploratory data analysis (EDA) to uncover patterns, trends, and actionable insights</li>
+                <li>Applied feature engineering and statistical analysis techniques to improve model performance</li>
+                <li>Built and evaluated machine learning models using Python, SQL, and Excel for predictive analytics</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Internship 2: Virtual Tech Gurus -->
+          <div class="experience__item reveal">
+            <div class="experience__dot"></div>
+            <div class="experience__card">
+              <h3 class="experience__role">AI/ML Intern</h3>
+              <p class="experience__company">Virtual Tech Gurus (VTG)</p>
+              <div class="experience__meta">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  AI/ML Projects
+                </span>
+              </div>
+              <ul class="experience__responsibilities">
+                <li>Contributed to AI and machine learning projects, supporting model development and data preprocessing pipelines</li>
+                <li>Designed and implemented database architecture for optimized performance and scalability</li>
+                <li>Worked with PostgreSQL and ClickHouse for big data analytics and efficient query processing</li>
+                <li>Assisted in performance tuning of database queries and ML model training workflows</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Certificates Section ===== -->
+    <section class="section" id="certificates" aria-label="Certificates">
+      <div class="container">
+        <h2 class="section__title reveal">Certificates</h2>
+        <p class="section__subtitle reveal">Credentials and continuous learning</p>
+
+        <div class="certificates__grid">
+
+          <div class="certificate-card reveal">
+            <div class="certificate-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <div>
+              <p class="certificate-card__title">Introduction to Artificial Intelligence</p>
+              <p class="certificate-card__issuer">Infosys Springboard</p>
+            </div>
+          </div>
+
+          <div class="certificate-card reveal">
+            <div class="certificate-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <div>
+              <p class="certificate-card__title">Workshop on Mobile Service</p>
+              <p class="certificate-card__issuer">Professional Training Workshop</p>
+            </div>
+          </div>
+
+          <div class="certificate-card reveal">
+            <div class="certificate-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <div>
+              <p class="certificate-card__title">Mobile/Laptop Service &amp; Training</p>
+              <p class="certificate-card__issuer">Mobile/Laptop Service &amp; Training Institute</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="section contact" id="contact" aria-label="Contact">
+      <div class="container">
+        <h2 class="section__title reveal">Contact Me</h2>
+        <p class="section__subtitle reveal">Let's connect and build something together</p>
+
+        <div class="contact__grid">
+
+          <!-- Contact Info -->
+          <div class="contact__info reveal">
+            <p class="contact__info-text">
+              I'm always open to discussing new opportunities, collaborations, or just having a chat about AI, data science, and technology. Feel free to reach out!
+            </p>
+
+            <a href="mailto:saravanaveln790@gmail.com" class="contact__info-item">
+              <div class="contact__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <p class="contact__info-label">Email</p>
+                <p class="contact__info-value">saravanaveln790@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+918838276891" class="contact__info-item">
+              <div class="contact__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="contact__info-label">Phone</p>
+                <p class="contact__info-value">+91 8838276891</p>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/saravana-vel-25b7252a5" target="_blank" rel="noopener noreferrer" class="contact__info-item">
+              <div class="contact__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <p class="contact__info-label">LinkedIn</p>
+                <p class="contact__info-value">Saravana Vel</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact__form-wrapper reveal">
+            <form id="contact-form" novalidate>
+              <!-- Honeypot field — hidden from real users, catches bots -->
+              <div class="form__honeypot" aria-hidden="true">
+                <label for="contact-website">Website</label>
+                <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form__group">
+                <label for="contact-name" class="form__label">Full Name</label>
+                <input type="text" id="contact-name" class="form__input" placeholder="Your name" required>
+                <p class="form__error" id="name-error">Please enter your name (at least 2 characters).</p>
+              </div>
+
+              <div class="form__group">
+                <label for="contact-email" class="form__label">Email Address</label>
+                <input type="email" id="contact-email" class="form__input" placeholder="your@email.com" required>
+                <p class="form__error" id="email-error">Please enter a valid email address.</p>
+              </div>
+
+              <div class="form__group">
+                <label for="contact-message" class="form__label">Message</label>
+                <textarea id="contact-message" class="form__textarea" placeholder="Tell me about your project or opportunity..." required></textarea>
+                <p class="form__error" id="message-error">Please enter a message (at least 10 characters).</p>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </button>
+
+              <div class="form__success" id="form-success">
+                ✓ Message prepared! Your email client should open shortly.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__text">
+        &copy; <span id="current-year">2026</span> Saravana Vel Narayanan. All rights reserved.
+      </p>
+
+      <div class="footer__socials">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/saravana-vel-25b7252a5" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Saravana1127" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:saravanaveln790@gmail.com" class="footer__social-link" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
